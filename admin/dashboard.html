@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Chicken Shop!</title>
+  <link rel="stylesheet" href="../libs/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../libs/node_modules/font-awesome/css/font-awesome.min.css">
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body id="page-top">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
+        <div class="container navbar-nav ml-auto">
+            <a class="navbar-brand" href="index.html">Shop bán Gà</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html">Trang Chủ
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../gioithieu.html">Giới Thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../lienhe.html">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <div id="wrapper" class="container">
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <h1 class="mb-4">Product Management</h1>
+        <a href="javascript:void(0);" class="btn btn-outline-primary mb-3" onclick="dashboard.openModal()">Create new
+          Product</a>
+
+        <table class="table table-striped table-bordered table-hover container" id="tbProducts">
+          <thead class="thead-dark">
+            <tr>
+              <th>#ID</th>
+              <th>Product Name</th>
+              <th>Product Image</th>
+              <th>Price</th>
+              <th>Manufactory</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal" id="addEditModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Create New Product</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form id="formAddEditProduct">
+                <input type="text" id="productId" name="productId" hidden value="0">
+                <div class="row form-group">
+                  <div class="col-4">
+                    <label for="">Product Name</label>
+                  </div>
+                  <div class="col-8">
+                    <input type="text" class="form-control" name="ProductName" id="ProductName" data-rule-required ="true" data-msg-required="Product name is required">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-4">
+                    <label for="">Product Image</label>
+                  </div>
+                  <div class="col-8 form-grou">
+                    <input type="text" name="ProductImage" class="form-control" id="ProductImage" data-rule-required="true" data-msg-required="Product image is required">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-4">
+                    <label for="">Price</label>
+                  </div>
+                  <div class="col-8">
+                    <input type="number" class="form-control" name="Price" id="Price" data-rule-required="true" data-msg-required="Price is required">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-4">
+                    <label for="">Manufactory</label>
+                  </div>
+                  <div class="col-8">
+                    <select name="Manufactory" id="Manufactory" class="form-control">
+                      <option value="Việt Nam" selected>Việt Nam</option>
+                      <option value="Korea">Korea</option>
+                      <option value="Japan">Japan</option>
+                      <option value="Mỹ">Mỹ</option>
+                      <option value="Lào">Lào</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-4">
+                    <label for="">Desciption</label>
+                  </div>
+                  <div class="col-8">
+                    <textarea class="form-control" name="Description" id="Description" cols="30" rows="10" data-rule-required="true" data-msg-required="Desciption is required"></textarea>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a href="javascript:;" class="btn btn-success" id="btnProduct" onclick="dashboard.save()">Create</a>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Chicken Shop! 2020</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="index.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../libs/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../libs/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../libs/node_modules/bootbox/dist/bootbox.min.js"></script>
+  <script src="../libs/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
