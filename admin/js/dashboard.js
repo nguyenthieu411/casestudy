@@ -18,8 +18,8 @@ dashboard.drawTable = function(){
                         "<td>" + v.manufactory + "</td>"+
                         "<td>" + v.description + "</td>"+
                         "<td>"+
-                            "<a href='javascript:;' onclick='dashboard.productDetail(" + v.id + ");'><i class='fa fa-edit'></i></a> "+
-                            "<a href='javascript:;' onclick='dashboard.remove("+ v.id +");'><i class='fa fa-trash'></i></a>"+
+                            "<a href='javascript:;' onclick='dashboard.productDetail(" + v.id + ");'><i class='fa fa-edit' style='font-size:36px'></i></a> "+
+                            "<a href='javascript:;' onclick='dashboard.remove("+ v.id +");'><i class='fa fa-trash' style='font-size:36px;color:red'></i></a>"+
                         "</td>"+
                     "</tr>"
                 );
