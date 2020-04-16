@@ -2,7 +2,7 @@ var dashboard = dashboard || { }
 
 dashboard.drawTable = function(){
     $.ajax({
-        url: "http://localhost:3000/products",
+        url: "https://thieu-chicken.herokuapp.com/products",
         method: "GET",
         dataType : "json",
         success : function(data){
@@ -11,7 +11,7 @@ dashboard.drawTable = function(){
             $.each(data, function(i, v){
                 $('#tbProducts tbody').append(
                     "<tr>"+
-                        "<td>" + (id++) +"</td>"+ //data[i].id
+                        "<td>" + (id++) +"</td>"+
                         "<td>"+ v.productName +"</td>"+
                         "<td><img src='../"+ v.productImage +"' width='120px' height='150px'></td>"+
                         "<td>" + v.price +"</td>"+
@@ -48,8 +48,8 @@ dashboard.remove = function(id){
         callback: function (result) {
             if(result){
                 $.ajax({
-                    url : "http://localhost:3000/products/" + id,
-                    method : "DELETE", //"POST"
+                    url : "https://thieu-chicken.herokuapp.com/products/" + id,
+                    method : "  ", //"POST"
                     dataType:'json',
                     success : function(data){
                         dashboard.drawTable();
@@ -72,7 +72,7 @@ dashboard.save = function(){
             addObj.description = $('#Description').val();
             
             $.ajax({
-                url : "http://localhost:3000/products",
+                url : "https://thieu-chicken.herokuapp.com/products",
                 method : "POST",
                 dataType: "json",
                 contentType: "application/json",
@@ -95,7 +95,7 @@ dashboard.save = function(){
             updateObj.id = $('#productId').val();
             
             $.ajax({
-                url : "http://localhost:3000/products/" + updateObj.id,
+                url : "https://thieu-chicken.herokuapp.com/products/" + updateObj.id,
                 method : "PUT",
                 dataType: "json",
                 contentType: "application/json",
@@ -114,7 +114,7 @@ dashboard.save = function(){
 
 dashboard.productDetail = function(id){
     $.ajax({
-        url : "http://localhost:3000/products/" + id,
+        url : "https://thieu-chicken.herokuapp.com/products/" + id,
         method: "GET",
         dataType: 'json',
         success : function(data){

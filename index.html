@@ -8,9 +8,9 @@
 </head>
 
 <body style="background-color: antiquewhite;">
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
         <div class="container navbar-nav ml-auto">
-            <a class="navbar-brand" href="index.html">Shop bán Gà</a>
+            <a class="navbar-brand" href="index.html">Chicken Shop!</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,13 +22,13 @@
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="gioithieu.html">Giới Thiệu</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="lienhe.html">Liên Hệ</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="login/login.html">Login</a>
                     </li>
                 </ul>
@@ -61,10 +61,67 @@
                 <span class="carousel-control-next-icon"></span>
             </a>
         </div>
+
         <div class="container my-4">
-            <div class="row text-center" id="showProducts">
+            <div class="container text-center text-warning bg-danger">
+                <br>
+                <h3>CHICKEN PRODUCTS</h3><br>
+            </div>
+            <div class="my-4">
+                <div class="row text-center" id="showProducts">
+
+                </div>
+                <div class="row m-lg-2" id="showyoutube">
+
+                </div>
             </div>
         </div>
+    </div>
+    <div class="text-center text-warning bg-danger">
+        <br>
+        <h3>THÔNG TIN GIỚI THIỆU</h3><br>
+
+        <div class="container">
+            <footer id="footer" class="footer-wrapper">
+                <div class="footer-widgets footer footer-1 ">
+                    <div class="row dark large-columns-3 mb-0">
+                        <div id="custom_html-2" class="widget_text col pb-0 widget widget_custom_html">
+                            <div class="textwidget custom-html-widget"><iframe
+                                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FChicken-Shop-106993720979359%2F&tabs=timeline&width=340&height=290&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                                    width="340" height="290" style="border:none;overflow:hidden" scrolling="no"
+                                    frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
+                        </div>
+                        <div id="custom_html-3" class="widget_text col pb-0 widget widget_custom_html">
+                            <div class="textwidget custom-html-widget"><iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.6073953178607!2d107.64703631468994!3d16.487982988623443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDI5JzE2LjciTiAxMDfCsDM4JzU3LjIiRQ!5e1!3m2!1svi!2s!4v1586939235539!5m2!1svi!2s"
+                                    width="340" height="290" frameborder="0" style="border:0;" allowfullscreen=""
+                                    aria-hidden="false" tabindex="0"></iframe></div>
+                        </div>
+                        <div id="custom_html-4" class="widget_text col pb-0 widget widget_custom_html">
+                            <div class="textwidget custom-html-widget">
+                                <p style="text-align: center;"><span style="font-size: 130%;"><strong>Trang tại
+                                            Gà, mua bán gà Miền
+                                            Trung</strong></span></p>
+
+                                <ul>
+                                    <li>Địa chỉ: Phú Mỹ, Phú Vang, Thừa Thiên Huế.</li>
+                                    <li>Tư vấn dịch vụ: 035.9456.789</li>
+                                    <li>Tư vấn kỹ thuật: 035.9.123.456</li>
+                                    <li>Website: ChickenShop – http://thieuga.freevnn.com/</li>
+                                    <li>Email:&nbsp;<a
+                                            href="mailto:nguyendinhthieu411@gmail.com">nguyendinhthieu411@gmail.com</a>
+                                    </li>
+                                    <li>Chi nhánh Hà Nội: Số 305 Lê Thanh Nghị, TP.Hà Nội</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+    <div class="container my-4">
         <footer class="sticky-footer bg-antiquewhite">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
@@ -72,11 +129,79 @@
                 </div>
             </div>
         </footer>
-        
-        <script src="libs/node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="libs/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="libs/node_modules/bootbox/dist/bootbox.min.js"></script>
-        <script src="product.js"></script>
+    </div>
+
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Chicken Shop!</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Xác nhận để mua hàng :D
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">YES</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">NO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal" id="ProductDetail">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="text-center modal-dialog " >
+                    <h3>Hình ảnh và thông tin liên hệ</h3><br>
+                    <h2>Chicken Shop!</h2>
+                   
+                </div>
+
+                <!-- Modal body -->
+                <div class="row modal-body">
+                    <div>
+                        <div class="row m-lg-3">
+                            <img id="productImage" style="width: 320px; height: 350px;" class='card-img-top' src=''
+                                alt=''>
+                            <ul>
+                                <li><b>Địa chỉ: Phú Mỹ, Phú Vang, Thừa Thiên Huế.</b></li><br>
+                                <li><b>Tư vấn dịch vụ: 035.9456.789</b></li><br>
+                                <li><b>Tư vấn kỹ thuật: 035.9.123.456</b></li><br>
+                                <li><b>Website: ChickenShop – <a href="http://thieuga.freevnn.com/">http://thieuga.freevnn.com/</a></b></li><br>
+                                <li><b>Email:&nbsp;<a
+                                    href="mailto:nguyendinhthieu411@gmail.com">nguyendinhthieu411@gmail.com</b></a>
+                                </li><br>
+                                <li><b>Chi nhánh Hà Nội: Số 305 Lê Thanh Nghị, TP.Hà Nội</b></li><br>
+                                <li><a href="index.html"><b>Trang chủ</b></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="row col-md-5">
+
+                    </div>
+
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="libs/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="libs/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="libs/node_modules/bootbox/dist/bootbox.min.js"></script>
+    <script src="product.js"></script>
 </body>
 
 </html>

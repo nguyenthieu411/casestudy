@@ -5,7 +5,7 @@ login.check = function(){
     let pass = $('#pass').val();
     let isLogged = false;
     $.ajax({
-        url:"http://localhost:3000/users",
+        url:"https://thieu-chicken.herokuapp.com/users",
         method: "GET",
         dataType: "json",
         success: function(data){
